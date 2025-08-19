@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker - Test Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .step {
+            background: #f7fafc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 4px solid #4299e1;
+        }
+        .step h3 {
+            color: #2d3748;
+            margin-top: 0;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .highlight {
+            background: #fed7d7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            background: #4299e1;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #3182ce;
+        }
+        .warning {
+            background: #fed7d7;
+            border-left-color: #e53e3e;
+            color: #742a2a;
+        }
+        .success {
+            background: #c6f6d5;
+            border-left-color: #38a169;
+            color: #22543d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Job Application Tracker - Test Guide</h1>
+        
+        <div class="step">
+            <h3>📋 Prerequisites</h3>
+            <p>Make sure you have:</p>
+            <ul>
+                <li>✅ Node.js installed (version 14 or higher)</li>
+                <li>✅ The Job Application Tracker project running</li>
+                <li>✅ A modern web browser (Chrome, Firefox, Safari, Edge)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>🚀 Step 1: Start the Application</h3>
+            <p>If the application is not already running, start it with:</p>
+            <div class="code-block">npm start</div>
+            <p>The application should open at <span class="highlight">http://localhost:3000</span></p>
+        </div>
+
+        <div class="step">
+            <h3>📊 Step 2: Open the Application</h3>
+            <p>Click the button below to open the Job Application Tracker:</p>
+            <a href="http://localhost:3000" class="button" target="_blank">Open Job Application Tracker</a>
+        </div>
+
+        <div class="step">
+            <h3>🎯 Step 3: Add Sample Data</h3>
+            <p>To test the application with realistic data:</p>
+            <ol>
+                <li>Open the browser's Developer Tools (Press <span class="highlight">F12</span> or right-click → Inspect)</li>
+                <li>Go to the <span class="highlight">Console</span> tab</li>
+                <li>Copy the entire content from <span class="highlight">sample-data.js</span></li>
+                <li>Paste it into the console and press <span class="highlight">Enter</span></li>
+                <li>Run the command: <span class="highlight">addSampleData()</span></li>
+            </ol>
+            <div class="warning">
+                <strong>Note:</strong> This will clear any existing data and replace it with sample job applications.
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>✅ Step 4: Verify Sample Data</h3>
+            <p>After running the sample data script, you should see:</p>
+            <ul>
+                <li>✅ 8 job applications from top tech companies</li>
+                <li>✅ Different statuses: Applied, Interviewing, Offered, Rejected, Withdrawn</li>
+                <li>✅ Complete information including contact details and descriptions</li>
+                <li>✅ Various job types and salary ranges</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>🧪 Step 5: Test All Features</h3>
+            <p>Now you can test all the application features:</p>
+            
+            <h4>📊 Dashboard Testing</h4>
+            <ul>
+                <li>✅ View all job applications in cards</li>
+                <li>✅ Status statistics (click to filter)</li>
+                <li>✅ Search by company name or position</li>
+                <li>✅ Filter by application status</li>
+                <li>✅ Sort by date, company, position, or status</li>
+                <li>✅ Export data to JSON file</li>
+                <li>✅ Import data from JSON file</li>
+            </ul>
+
+            <h4>➕ Add Job Testing</h4>
+            <ul>
+                <li>✅ Fill out the comprehensive form</li>
+                <li>✅ Test form validation (required fields)</li>
+                <li>✅ Add contact information</li>
+                <li>✅ Include job description and notes</li>
+                <li>✅ Set application status and job type</li>
+                <li>✅ Save and return to dashboard</li>
+            </ul>
+
+            <h4>📝 Job Details Testing</h4>
+            <ul>
+                <li>✅ View detailed job information</li>
+                <li>✅ Click contact links (email, phone)</li>
+                <li>✅ Edit job information inline</li>
+                <li>✅ Delete job with confirmation</li>
+                <li>✅ View timestamps (created/updated)</li>
+            </ul>
+        </div>
+
+        <div class="step success">
+            <h3>🎉 Congratulations!</h3>
+            <p>You've successfully set up and tested the Job Application Tracker with sample data. The application is now ready for use with realistic job application examples.</p>
+        </div>
+
+        <div class="step">
+            <h3>📁 Sample Data Includes</h3>
+            <ul>
+                <li><strong>Google</strong> - Frontend Developer (Applied)</li>
+                <li><strong>Microsoft</strong> - Software Engineer (Interviewing)</li>
+                <li><strong>Apple</strong> - iOS Developer (Offered)</li>
+                <li><strong>Amazon</strong> - Full Stack Developer (Rejected)</li>
+                <li><strong>Netflix</strong> - React Developer (Withdrawn)</li>
+                <li><strong>Meta</strong> - Frontend Engineer (Interviewing)</li>
+                <li><strong>Uber</strong> - Mobile Developer (Applied)</li>
+                <li><strong>Airbnb</strong> - Full Stack Engineer (Applied)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>🔧 Troubleshooting</h3>
+            <p>If you encounter any issues:</p>
+            <ul>
+                <li>Make sure the React app is running on <span class="highlight">http://localhost:3000</span></li>
+                <li>Check that the browser console is open (F12)</li>
+                <li>Ensure you copy the entire <span class="highlight">sample-data.js</span> content</li>
+                <li>Try refreshing the page if the data doesn't appear</li>
+                <li>Check the console for any error messages</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
